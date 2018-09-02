@@ -83,7 +83,7 @@ func (c *UsersProfileGetCall) Do(ctx context.Context) (*objects.UserProfile, err
 	}
 	var res struct {
 		objects.GenericResponse
-		*objects.UserProfile
+		*objects.UserProfile `json:"profile"`
 	}
 	if err := c.service.client.postForm(ctx, endpoint, v, &res); err != nil {
 		return nil, errors.Wrap(err, `failed to post to users.profile.get`)

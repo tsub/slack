@@ -1094,6 +1094,7 @@
     "name": "users.profile.get",
     "proxy": true,
     "return": "objects.UserProfile",
+    "json": "profile",
     "args": [
       {
         "name": "user",
